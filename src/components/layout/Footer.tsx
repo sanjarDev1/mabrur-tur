@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -8,23 +8,22 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { href: '/', label: t('nav.home') },
-    { href: '/tours', label: t('nav.tours') },
-    { href: '/about', label: t('nav.about') },
-    { href: '/staff', label: t('nav.staff') },
-    { href: '/contact', label: t('nav.contact') },
+    { href: "/", label: t("nav.home") },
+    { href: "/tours", label: t("nav.tours") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/staff", label: t("nav.staff") },
+    { href: "/contact", label: t("nav.contact") },
   ];
 
   const services = [
-    { href: '/tours?category=cultural', label: t('tours.cultural') },
-    { href: '/tours?category=historical', label: t('tours.historical') },
-    { href: '/tours?category=adventure', label: t('tours.adventure') },
-    { href: '/tours?category=religious', label: t('tours.religious') },
+    { href: "/tours?category=cultural", label: t("tours.cultural") },
+    { href: "/tours?category=historical", label: t("tours.historical") },
+    { href: "/tours?category=adventure", label: t("tours.adventure") },
   ];
 
   const legal = [
-    { href: '/terms', label: t('footer.termsOfService') },
-    { href: '/privacy', label: t('footer.privacyPolicy') },
+    { href: "/terms", label: t("footer.termsOfService") },
+    { href: "/privacy", label: t("footer.privacyPolicy") },
   ];
 
   return (
@@ -37,32 +36,42 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">M</span>
               </div>
-                          <span className="text-xl font-bold text-gray-900 dark:text-white">MABRUR TUR</span>
+              <span className="text-xl font-bold text-white-900 dark:text-white">
+                MABRUR TUR
+              </span>
             </div>
             <p className="text-gray-300 dark:text-gray-400 text-sm leading-relaxed mb-6">
-              {t('footer.description')}
+              {t("footer.description")}
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin size={16} className="text-primary-400 flex-shrink-0" />
-                <span className="text-gray-300 dark:text-gray-400">Toshkent shahri, Shayxontohur tumani, Sarxumdon MFY</span>
+                <span className="text-gray-300 dark:text-gray-400">
+                  Toshkent shahri, Shayxontohur tumani, Sarxumdon MFY
+                </span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone size={16} className="text-primary-400 flex-shrink-0" />
-                <span className="text-gray-300 dark:text-gray-400">+998 99 313 98 98</span>
+                <span className="text-gray-300 dark:text-gray-400">
+                  +998 99 313 98 98
+                </span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail size={16} className="text-primary-400 flex-shrink-0" />
-                <span className="text-gray-300 dark:text-gray-400">info@mabrurtur.uz</span>
+                <span className="text-gray-300 dark:text-gray-400">
+                  info@mabrurtur.uz
+                </span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.quickLinks')}</h3>
+            <h3 className="font-semibold text-lg mb-4">
+              {t("footer.quickLinks")}
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -79,7 +88,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.services')}</h3>
+            <h3 className="font-semibold text-lg mb-4">
+              {t("footer.services")}
+            </h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.href}>
@@ -96,7 +107,7 @@ export default function Footer() {
 
           {/* Legal & Social */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.legal')}</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-2 mb-6">
               {legal.map((link) => (
                 <li key={link.href}>
@@ -112,25 +123,13 @@ export default function Footer() {
 
             {/* Social Media */}
             <div>
-              <h4 className="font-medium mb-3">{t('contact.socialMedia')}</h4>
+              <h4 className="font-medium mb-3">{t("contact.socialMedia")}</h4>
               <div className="flex space-x-3">
                 <a
-                  href="#"
-                  className="w-8 h-8 bg-gray-800 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
-                >
-                  <Facebook size={16} />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/mabrur_tur?igsh=ajdiNDI2d2luNWxo"
                   className="w-8 h-8 bg-gray-800 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
                 >
                   <Instagram size={16} />
-                </a>
-                <a
-                  href="#"
-                  className="w-8 h-8 bg-gray-800 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
-                >
-                  <Twitter size={16} />
                 </a>
               </div>
             </div>
@@ -141,13 +140,17 @@ export default function Footer() {
         <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 dark:text-gray-500">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <p>© {currentYear} "MABRUR TUR" MCHJ. {t('footer.rightsReserved')}.</p>
-              <p className="mt-1">STİR: 312 325 197 | Ro'yxat raqami: 2899660</p>
-              <p className="mt-1">Davlat ro'yxatidan o'tdi: 01.08.2025</p>
+              <p>
+                © {currentYear} "MABRUR TUR" MCHJ. {t("footer.rightsReserved")}.
+              </p>
+              <p className="mt-1">
+                {t("footer.tin")} | {t("footer.regNumber")}
+              </p>
+              <p className="mt-1">{t("footer.regDate")}</p>
             </div>
             <div className="text-center md:text-right">
-              <p>Manzil: Toshkent shahri, Shayxontohur tumani,</p>
-              <p>Sarxumdon MFY, Gulobod mavzesi, 268-uy, 42-xonadon</p>
+              <p>{t("footer.address")}</p>
+              <p>{t("footer.addressLine2")}</p>
             </div>
           </div>
         </div>

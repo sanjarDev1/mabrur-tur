@@ -75,7 +75,7 @@ export default function BookingPage() {
               <p className="text-lg font-mono font-bold">{bookingId}</p>
             </div>
             <Button variant="primary" onClick={() => window.location.href = '/'}>
-              Return to Home
+              {t('booking.returnHome')}
             </Button>
           </CardContent>
         </Card>
@@ -135,7 +135,7 @@ export default function BookingPage() {
 
           <Card>
             <CardHeader>
-              <h2 className="text-xl font-semibold">Booking Information</h2>
+              <h2 className="text-xl font-semibold">{t('booking.bookingInfo')}</h2>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -143,7 +143,7 @@ export default function BookingPage() {
                   label={t('booking.fullName')}
                   {...register('fullName')}
                   error={errors.fullName?.message}
-                  placeholder="Enter your full name"
+                  placeholder={t('booking.fullNamePlaceholder')}
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -151,7 +151,7 @@ export default function BookingPage() {
                     label={t('booking.phone')}
                     {...register('phone')}
                     error={errors.phone?.message}
-                    placeholder="+998 XX XXX XX XX"
+                    placeholder={t('booking.phonePlaceholder')}
                   />
 
                   <Input
@@ -159,7 +159,7 @@ export default function BookingPage() {
                     type="email"
                     {...register('email')}
                     error={errors.email?.message}
-                    placeholder="your@email.com"
+                    placeholder={t('booking.emailPlaceholder')}
                   />
                 </div>
 
@@ -167,7 +167,7 @@ export default function BookingPage() {
                   label={t('booking.selectedTour')}
                   {...register('tourId')}
                   error={errors.tourId?.message}
-                  placeholder="Tour ID"
+                  placeholder={t('booking.tourIdPlaceholder')}
                   disabled
                 />
 
@@ -192,7 +192,7 @@ export default function BookingPage() {
                 <Textarea
                   label={t('booking.notes')}
                   {...register('notes')}
-                  placeholder="Any special requests or additional information..."
+                  placeholder={t('booking.notesPlaceholder')}
                   rows={4}
                 />
 

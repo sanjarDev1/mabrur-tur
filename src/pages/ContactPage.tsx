@@ -69,14 +69,14 @@ export default function ContactPage() {
               <CardHeader>
                 <h2 className="text-2xl font-semibold mb-2">{t('contact.getInTouch')}</h2>
                 <p className="text-gray-600">
-                  Send us a message and we will get back to you as soon as possible.
+                  {t('contact.getInTouchMessage')}
                 </p>
               </CardHeader>
               <CardContent>
                 {isSubmitted && (
                   <div className="mb-6 p-4 bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 rounded-lg flex items-center">
                     <CheckCircle className="text-green-500 mr-3" size={20} />
-                    <span className="text-green-700">Message sent successfully!</span>
+                    <span className="text-green-700">{t('contact.messageSentSuccess')}</span>
                   </div>
                 )}
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     label={t('contact.name')}
                     {...register('name')}
                     error={errors.name?.message}
-                    placeholder="Your full name"
+                    placeholder={t('contact.fullNamePlaceholder')}
                   />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -94,14 +94,14 @@ export default function ContactPage() {
                       type="email"
                       {...register('email')}
                       error={errors.email?.message}
-                      placeholder="your@email.com"
+                      placeholder={t('contact.emailPlaceholder')}
                     />
                     
                     <Input
                       label={t('contact.phone')}
                       {...register('phone')}
                       error={errors.phone?.message}
-                      placeholder="+998 XX XXX XX XX"
+                      placeholder={t('contact.phonePlaceholder')}
                     />
                   </div>
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     label={t('contact.message')}
                     {...register('message')}
                     error={errors.message?.message}
-                    placeholder="Tell us about your travel plans or questions..."
+                    placeholder={t('contact.messagePlaceholder')}
                     rows={5}
                   />
 
@@ -141,10 +141,8 @@ export default function ContactPage() {
                     <MapPin className="text-primary-600 mr-4 mt-1 flex-shrink-0" size={20} />
                     <div>
                       <h3 className="font-medium text-gray-900 mb-1">{t('contact.address')}</h3>
-                      <p className="text-gray-600">
-                        Toshkent shahri, Shayxontohur tumani<br />
-                        Sarxumdon MFY, Gulobod mavzesi<br />
-                        268-uy, 42-xonadon
+                      <p className="text-gray-600 whitespace-pre-line">
+                        {t('contact.addressFull')}
                       </p>
                     </div>
                   </div>
@@ -170,9 +168,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium text-gray-900 mb-1">{t('contact.workingHours')}</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 09:00 - 18:00<br />
-                        Saturday: 09:00 - 15:00<br />
-                        Sunday: Closed
+                        {t('contact.workingHoursMon')}<br />
+                        {t('contact.workingHoursSat')}<br />
+                        {t('contact.workingHoursSun')}
                       </p>
                     </div>
                   </div>
@@ -180,15 +178,23 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
+            {/* Interactive Map */}
             <Card>
+              <CardHeader>
+                <h3 className="text-lg font-semibold mb-2">{t('contact.ourLocation')}</h3>
+              </CardHeader>
               <CardContent className="p-0">
-                <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <MapPin size={48} className="mx-auto mb-2" />
-                    <p>Interactive Map</p>
-                    <p className="text-sm">(Google Maps integration)</p>
-                  </div>
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0986!2d69.23006138209591!3d41.3238121111655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE5JzI1LjciTiA2OcKwMTMnNDguMiJF!5e0!3m2!1sen!2s!4v1641891234567!5m2!1sen!2s"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={t('contact.officeLocation')}
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>

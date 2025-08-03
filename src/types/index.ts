@@ -2,6 +2,8 @@ export interface Tour {
   id: string;
   title: string;
   description: string;
+  titleKey?: string; // translation key for title
+  descriptionKey?: string; // translation key for description
   image: string;
   price: number;
   duration: number; // in days

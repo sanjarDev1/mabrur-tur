@@ -1,19 +1,35 @@
 import type { Tour } from "../types/index";
 const toursData: Tour[] = [
-  {
-    id: "1",
-    title: "Samarkand & Bukhara Discovery",
+ {
+    id: "13",
+    title: "Bali & Java Highlights",
     description:
-      "Journey through the ancient cities of the Silk Road, exploring magnificent madrasas, mausoleums, and bazaars.",
-    image:
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/0c/cb/6e.jpg",
-    price: 299,
-    duration: 3,
+      "Discover Indonesia’s stunning temples, rice terraces, volcanic landscapes and tropical beaches.",
+    image: "https://www.agoda.com/wp-content/uploads/2024/12/Bali-featured.jpg",
+    price: 899,
+    duration: 6,
     category: "cultural",
-    location: "Samarkand, Bukhara",
-    includes: ["Transportation", "Guide", "Entrance fees"],
+    location: "Bali & Java, Indonesia",
+    includes: ["Temple visits", "Beach resort", "Local guide"],
     itinerary: [],
-    maxParticipants: 15,
+    maxParticipants: 14,
+    difficulty: "moderate",
+    featured: false,
+  },
+  {
+    id: "7",
+    title: "Dubai Luxury Highlights",
+    description:
+      "Explore futuristic architecture, luxury shopping, and desert adventures in dazzling Dubai.",
+    image:
+      "https://cdn.twocontinents.com/how_and_when_was_dubai_founded_d816846cf0.jpg",
+    price: 999,
+    duration: 4,
+    category: "adventure",
+    location: "Dubai, UAE",
+    includes: ["Luxury hotel", "City tour", "Desert safari"],
+    itinerary: [],
+    maxParticipants: 12,
     difficulty: "easy",
     featured: true,
   },
@@ -103,23 +119,6 @@ const toursData: Tour[] = [
     featured: false,
   },
   {
-    id: "7",
-    title: "Dubai Luxury Highlights",
-    description:
-      "Explore futuristic architecture, luxury shopping, and desert adventures in dazzling Dubai.",
-    image:
-      "https://cdn.twocontinents.com/how_and_when_was_dubai_founded_d816846cf0.jpg",
-    price: 999,
-    duration: 4,
-    category: "adventure",
-    location: "Dubai, UAE",
-    includes: ["Luxury hotel", "City tour", "Desert safari"],
-    itinerary: [],
-    maxParticipants: 12,
-    difficulty: "easy",
-    featured: true,
-  },
-  {
     id: "8",
     title: "Cultural Istanbul & Cappadocia",
     description:
@@ -203,22 +202,7 @@ const toursData: Tour[] = [
     difficulty: "easy",
     featured: true,
   },
-  {
-    id: "13",
-    title: "Bali & Java Highlights",
-    description:
-      "Discover Indonesia’s stunning temples, rice terraces, volcanic landscapes and tropical beaches.",
-    image: "https://www.agoda.com/wp-content/uploads/2024/12/Bali-featured.jpg",
-    price: 899,
-    duration: 6,
-    category: "cultural",
-    location: "Bali & Java, Indonesia",
-    includes: ["Temple visits", "Beach resort", "Local guide"],
-    itinerary: [],
-    maxParticipants: 14,
-    difficulty: "moderate",
-    featured: false,
-  },
+  
 ];
 
 export default toursData;

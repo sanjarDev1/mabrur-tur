@@ -18,17 +18,17 @@ export default function AboutPage() {
   };
 
   const stats = [
-    { icon: Users, number: '15+', label: t('home.experienceYears') },
+    { icon: Users, number: '3+', label: t('home.experienceYears') },
     { icon: Award, number: '2,500+', label: t('home.happyClients') },
     { icon: FileText, number: '500+', label: t('home.toursCompleted') },
-    { icon: Users, number: '25+', label: t('home.licensedGuides') },
+    { icon: Users, number: '15+', label: t('home.licensedGuides') },
   ];
 
   const certifications = [
-    'Licensed Tour Operator by Ministry of Tourism',
-    'ISO 9001:2015 Quality Management',
-    'IATA Accredited Travel Agent',
-    'Member of Uzbekistan Tourism Association'
+    t('about.cert1'),
+    t('about.cert2'),
+    t('about.cert3'),
+    t('about.cert4')
   ];
 
   return (

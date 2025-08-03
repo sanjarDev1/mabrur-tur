@@ -32,7 +32,11 @@ export default function TourDetails() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="container-custom section-padding max-w-3xl mx-auto">
         <div className="mb-6 relative">
-          <img src={tour.image} alt={tour.title} className="rounded-lg w-full h-72 object-cover shadow" />
+          <img 
+            src={tour.image} 
+            alt={t(`tours.tourTitles.${tour.id}`, tour.title)} 
+            className="rounded-lg w-full h-72 object-cover shadow" 
+          />
           {tour.featured && (
             <div className="absolute top-4 left-4 bg-accent-500 text-white rounded-full px-4 py-2 text-sm font-semibold flex items-center gap-2">
               <Star size={16} /> {t('tours.featured')}
@@ -42,7 +46,9 @@ export default function TourDetails() {
             ${tour.price}
           </div>
         </div>
-        <h1 className="text-3xl font-bold mb-2">{tour.title}</h1>
+        <h1 className="text-3xl font-bold mb-2">
+          {t(`tours.tourTitles.${tour.id}`, tour.title)}
+        </h1>
         <div className="flex flex-wrap gap-4 mb-4 text-sm">
           <span className={`px-3 py-1 rounded-full font-medium ${getDifficultyColor(tour.difficulty)}`}>
             {t(`tours.${tour.difficulty}`)}
@@ -60,7 +66,9 @@ export default function TourDetails() {
             {t(`tours.${tour.category}`)}
           </span>
         </div>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">{t(`tours.descriptions.${tour.id}`)}</p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          {t(`tours.tourDescriptions.${tour.id}`, tour.description)}
+        </p>
         {(t(`tours.includesList.${tour.id}`, { returnObjects: true }) as string[])?.length > 0 && (
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">{t('tours.includes')}</h2>

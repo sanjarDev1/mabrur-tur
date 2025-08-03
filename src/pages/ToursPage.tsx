@@ -2,7 +2,7 @@ import Button from '@/components/ui/Button';
 import Card, { CardContent, CardHeader } from '@/components/ui/Card';
 import Input from '@/components/ui/Input';
 import { Calendar, Filter, MapPin, Search, Users } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useSearchParams } from 'react-router-dom';
 import toursData from '../data/toursData'; // Импорт данных
@@ -12,6 +12,15 @@ export default function ToursPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'all');
+
+  // URL parametrlarini kuzatish va state ni yangilash
+  useEffect(() => {
+    const search = searchParams.get('search') || '';
+    const category = searchParams.get('category') || 'all';
+    
+    setSearchTerm(search);
+    setSelectedCategory(category);
+  }, [searchParams]);
 
   const categories = [
     { value: 'all', label: t('tours.allCategories') },
@@ -23,15 +32,18 @@ export default function ToursPage() {
 
   const filteredTours = useMemo(() => {
     return toursData.filter(tour => {
-      const matchesSearch = tour.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tour.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const title = t(`tours.tourTitles.${tour.id}`, tour.title);
+      const description = t(`tours.tourDescriptions.${tour.id}`, tour.description);
+      
+      const matchesSearch = title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         tour.location.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesCategory = selectedCategory === 'all' || tour.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, t]);
 
   const updateSearchParams = (key: string, value: string) => {
     const newParams = new URLSearchParams(searchParams);
@@ -72,7 +84,7 @@ export default function ToursPage() {
               {t('tours.title')}
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Discover authentic experiences across Uzbekistan with our licensed guides
+              {t('tours.subtitle')}
             </p>
           </div>
         </div>
@@ -129,8 +141,10 @@ export default function ToursPage() {
             <div className="text-gray-400 dark:text-gray-500 mb-4">
               <Search size={64} className="mx-auto" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No tours found</h3>
-            <p className="text-gray-500">Try adjusting your search criteria</p>
+            <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">
+              {t('tours.noToursFound')}
+            </h3>
+            <p className="text-gray-500">{t('tours.tryAdjusting')}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,7 +153,7 @@ export default function ToursPage() {
                 <div className="aspect-video bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
                   <img
                     src={tour.image}
-                    alt={tour.title}
+                    alt={t(`tours.tourTitles.${tour.id}`, tour.title)}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-primary-600 dark:text-primary-400">
@@ -162,8 +176,12 @@ export default function ToursPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold mb-2">{tour.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">{t(`tours.descriptions.${tour.id}`)}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t(`tours.tourTitles.${tour.id}`, tour.title)}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+                    {t(`tours.tourDescriptions.${tour.id}`, tour.description)}
+                  </p>
 
                   <div className="space-y-2 text-sm text-gray-500">
                     <div className="flex items-center space-x-2">

@@ -12,32 +12,32 @@ export default function HomePage() {
   const featuredTours = toursData.filter(tour => tour.featured).slice(0, 3);
 
   const stats = [
-    { number: '15+', label: t('home.experienceYears') },
+    { number: '3+', label: t('home.experienceYears') },
     { number: '2,500+', label: t('home.happyClients') },
     { number: '500+', label: t('home.toursCompleted') },
-    { number: '25+', label: t('home.licensedGuides') },
+    { number: '15+', label: t('home.licensedGuides') },
   ];
 
   const whyChooseUs = [
     {
       icon: Award,
-      title: 'Licensed & Certified',
-      description: 'Fully licensed tour operator with certified guides'
+      title: t('home.licensedCertified'),
+      description: t('home.licensedCertifiedDesc')
     },
     {
       icon: Users,
-      title: 'Expert Local Guides',
-      description: 'Professional guides with deep cultural knowledge'
+      title: t('home.expertGuides'),
+      description: t('home.expertGuidesDesc')
     },
     {
       icon: Calendar,
-      title: 'Flexible Scheduling',
-      description: 'Tours available year-round with flexible dates'
+      title: t('home.flexibleScheduling'),
+      description: t('home.flexibleSchedulingDesc')
     },
     {
       icon: MapPin,
-      title: 'Authentic Experiences',
-      description: 'Discover hidden gems and local traditions'
+      title: t('home.authenticExperiences'),
+      description: t('home.authenticExperiencesDesc')
     }
   ];
 
@@ -94,7 +94,7 @@ export default function HomePage() {
             {t('home.featuredToursTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our most popular tours showcasing Uzbekistan's rich heritage
+            {t('home.featuredToursSubtitle')}
           </p>
         </div>
 
@@ -113,8 +113,12 @@ export default function HomePage() {
               </div>
 
               <CardHeader>
-                <h3 className="text-xl font-semibold mb-2">{tour.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{tour.description}</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t(`tours.tourTitles.${tour.id}`, tour.title)}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {t(`tours.tourDescriptions.${tour.id}`, tour.description)}
+                </p>
 
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-1">
@@ -149,7 +153,7 @@ export default function HomePage() {
         <div className="text-center mt-12">
           <Link to="/tours">
             <Button variant="primary" size="lg">
-              View All Tours
+              {t('home.viewAllTours')}
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </Link>
@@ -164,7 +168,7 @@ export default function HomePage() {
               {t('home.whyChooseUsTitle')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the difference with our professional and licensed tour services
+              {t('home.whyChooseUsSubtitle')}
             </p>
           </div>
 
@@ -193,10 +197,10 @@ export default function HomePage() {
       <section className="bg-gradient-to-r from-primary-600 to-accent-600 text-white">
         <div className="container-custom section-padding text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Start Your Journey?
+            {t('home.ctaTitle')}
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Book your authentic Uzbekistan experience today with our licensed tour operators
+            {t('home.ctaSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
