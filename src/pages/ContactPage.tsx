@@ -153,7 +153,7 @@ export default function ContactPage() {
                     <Phone className="text-primary-600 mr-4 mt-1 flex-shrink-0" size={20} />
                     <div>
                       <h3 className="font-medium text-gray-900 mb-1">{t('contact.phoneNumber')}</h3>
-                      <p className="text-gray-600">+998 (71) 123-45-67</p>
+                      <p className="text-gray-600">+998 99 313 98 98</p>
                     </div>
                   </div>
 

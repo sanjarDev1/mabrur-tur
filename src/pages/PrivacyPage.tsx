@@ -154,7 +154,7 @@ export default function PrivacyPage() {
                     <p><strong>Mabrur Travel LLC</strong></p>
                     <p>123 Mustaqillik Street, Tashkent 100000, Uzbekistan</p>
                     <p>Email: privacy@mabrurtravel.uz</p>
-                    <p>Phone: +998 (71) 123-45-67</p>
+                    <p>Phone: +998 99 313 98 98</p>
                   </div>
                 </div>
               </CardContent>

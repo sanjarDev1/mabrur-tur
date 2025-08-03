@@ -12,7 +12,7 @@ export default function AboutPage() {
     licenseNumber: 'MABRUR TUR MCHJ',
     tin: '312 325 197',
     address: 'Toshkent shahri, Shayxontohur tumani, Sarxumdon MFY, Gulobod mavzesi, 268-uy, 42-xonadon',
-    phone: '+998 (71) 123-45-67',
+    phone: '+998 99 313 98 98',
     email: 'info@mabrurtur.uz',
     workingHours: '09:00 - 18:00 (Dushanba - Juma)'
   };

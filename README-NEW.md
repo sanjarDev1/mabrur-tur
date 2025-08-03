@@ -243,7 +243,7 @@ This project is licensed under the MIT License.
 For support or questions about this tour operator website:
 
 - **Email**: info@mabrurtravel.uz
-- **Phone**: +998 (71) 123-45-67
+- **Phone**: +998 99 313 98 98
 - **Address**: 123 Mustaqillik Street, Tashkent 100000, Uzbekistan
 
 ---
