@@ -9,26 +9,38 @@ export default function StaffPage() {
   // Mock staff data with translation keys
   const staff: Staff[] = [
     {
-      id: "1",
-      name: t('staff.staffData.dostonbek.name'),
-      position: t('staff.staffData.dostonbek.position'),
-      image: "/Dostonbek.jpg",
-      certifications: t('staff.staffData.dostonbek.certifications', { returnObjects: true }) as string[],
-      workingHours: "08:00 - 17:00",
-      specializations: t('staff.staffData.dostonbek.specializations', { returnObjects: true }) as string[],
-      languages: t('staff.staffData.dostonbek.languages', { returnObjects: true }) as string[],
-      experience: 8,
+      id: "2",
+      name: t("staff.staffData.qobiljon.name"),
+      position: t("staff.staffData.qobiljon.position"),
+      image: "/Qobiljon.jpg",
+      certifications: t("staff.staffData.qobiljon.certifications", {
+        returnObjects: true,
+      }) as string[],
+      workingHours: "09:00 - 18:00",
+      specializations: t("staff.staffData.qobiljon.specializations", {
+        returnObjects: true,
+      }) as string[],
+      languages: t("staff.staffData.qobiljon.languages", {
+        returnObjects: true,
+      }) as string[],
+      experience: 6,
     },
     {
-      id: "2",
-      name: t('staff.staffData.qobiljon.name'),
-      position: t('staff.staffData.qobiljon.position'),
-      image: "/Qobiljon.jpg",
-      certifications: t('staff.staffData.qobiljon.certifications', { returnObjects: true }) as string[],
-      workingHours: "09:00 - 18:00",
-      specializations: t('staff.staffData.qobiljon.specializations', { returnObjects: true }) as string[],
-      languages: t('staff.staffData.qobiljon.languages', { returnObjects: true }) as string[],
-      experience: 6,
+      id: "1",
+      name: t("staff.staffData.dostonbek.name"),
+      position: t("staff.staffData.dostonbek.position"),
+      image: "/Dostonbek.jpg",
+      certifications: t("staff.staffData.dostonbek.certifications", {
+        returnObjects: true,
+      }) as string[],
+      workingHours: "08:00 - 17:00",
+      specializations: t("staff.staffData.dostonbek.specializations", {
+        returnObjects: true,
+      }) as string[],
+      languages: t("staff.staffData.dostonbek.languages", {
+        returnObjects: true,
+      }) as string[],
+      experience: 8,
     },
   ];
 

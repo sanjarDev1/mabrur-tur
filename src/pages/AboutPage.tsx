@@ -171,6 +171,32 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
+            {/* Director Message */}
+            <Card>
+              <CardHeader>
+                <h2 className="text-2xl font-semibold mb-4 flex items-center">
+                  <Users className="mr-3 text-primary-600" size={24} />
+                  {t('about.directorMessage')}
+                </h2>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {t('about.directorTitle')}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-2">
+                    {t('about.directorExperience')}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {t('about.directorEducation')}
+                  </p>
+                </div>
+                <blockquote className="text-gray-700 leading-relaxed italic text-center border-l-4 border-primary-600 pl-4">
+                  {t('about.directorQuote')}
+                </blockquote>
+              </CardContent>
+            </Card>
+
             {/* Certifications */}
             <Card>
               <CardHeader>

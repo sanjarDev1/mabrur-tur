@@ -196,7 +196,7 @@
       },
       "qobiljon": {
         "name": "Qobiljon Azimov",
-        "position": "Madaniyat mutaxassisi",
+        "position": "Direktor",
         "certifications": [
           "Litsenziyali gid",
           "UNESCO Heritage ta'limi",
@@ -231,7 +231,12 @@
     "whyChooseUs": "Nega Mabrur Travel'ni tanlash kerak",
     "qualityService": "Premium sifatli xizmat",
     "localExpertise": "Chuqur mahalliy bilim",
-    "safetyFirst": "Xavfsizlik va ishonchlilik"
+    "safetyFirst": "Xavfsizlik va ishonchlilik",
+    "directorMessage": "Direktor",
+    "directorTitle": "Qobiljon Azimov - Direktor",
+    "directorQuote": "\"Mabrur Travel kompaniyasining direktori sifatida, bizning asosiy maqsadimiz O'zbekistonning noyob madaniy merosini dunyoga tanitish va har bir mehmonimizga unutilmas tajribalar yaratishdir. Bizning professional jamoamiz va ko'p yillik tajribamiz bilan biz sizga eng yaxshi xizmatni taqdim etishga tayyormiz.\"",
+    "directorExperience": "10+ yillik turizm sohasidagi tajriba",
+    "directorEducation": "Turizm va madaniy meros mutaxassisi"
   },
   "contact": {
     "title": "Biz bilan bog'laning - Sizga yordam berishga tayyormiz",

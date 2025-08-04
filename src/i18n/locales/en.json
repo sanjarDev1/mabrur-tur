@@ -189,7 +189,7 @@
       },
       "qobiljon": {
         "name": "Qobiljon Azimov",
-        "position": "Cultural Specialist",
+        "position": "Director",
         "certifications": [
           "Licensed Guide",
           "UNESCO Heritage Training",
@@ -224,7 +224,12 @@
     "whyChooseUs": "Why Choose Mabrur Travel",
     "qualityService": "Premium Quality Service",
     "localExpertise": "Deep Local Knowledge",
-    "safetyFirst": "Safety & Reliability"
+    "safetyFirst": "Safety & Reliability",
+    "directorMessage": "Message from Director",
+    "directorTitle": "Qobiljon Azimov - Director",
+    "directorQuote": "\"As the Director of Mabrur Travel, our main goal is to showcase Uzbekistan's unique cultural heritage to the world and create unforgettable experiences for each of our guests. With our professional team and years of experience, we are ready to provide you with the best service.\"",
+    "directorExperience": "10+ years of experience in tourism industry",
+    "directorEducation": "Tourism and Cultural Heritage Specialist"
   },
   "contact": {
     "title": "Contact Us - We're Here to Help",
